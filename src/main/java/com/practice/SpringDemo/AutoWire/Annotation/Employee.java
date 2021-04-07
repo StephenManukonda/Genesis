@@ -14,7 +14,7 @@ public class Employee {
 	public void getsal() {
 		salary.calculateSalar();
 	}
-	@Autowired
+	
 	public Employee(Salary salary) {
 		super();
 		this.salary = salary;
@@ -30,6 +30,8 @@ public class Employee {
 	/**
 	 * @param salary the salary to set
 	 */
+	@Autowired
+	@Qualifier("salaryz")
 	public void setSalary(Salary salary) {
 		this.salary = salary;
 	}
