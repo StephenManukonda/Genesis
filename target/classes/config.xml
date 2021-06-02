@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="student" class="com.practice.SpringDemo.Student"></bean>
+	<bean name="airtel" class="com.practice.SpringDemo.Airtel">
+		<property name="simNum" value="100"></property>
+		<property name="trai" ref="traiObject"></property>
+	</bean>
+	<bean name="jio" class="com.practice.SpringDemo.Jio"></bean>
+	<bean name="traiObject" class="com.practice.SpringDemo.Trai">
+		<property name="frequency" value="100"></property>
+		<property name="wavelength" value="50"></property>
+	</bean>
+	<bean name="idea" class="com.practice.SpringDemo.Idea"></bean>
+	<bean name="operator" class="com.practice.SpringDemo.Operator"> 
+	<property name="sim" ref="jio"></property>
+	</bean>
+
+	<bean name="hearto" class="com.practice.SpringDemo.Annotation.Heart"></bean>
+	<bean name="human" class="com.practice.SpringDemo.Annotation.Human" autowire="constructor"></bean>
+</beans>  
